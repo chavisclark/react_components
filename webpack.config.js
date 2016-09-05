@@ -1,0 +1,54 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWbPackPlugin = require('html-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var path = require('path');
+
+var HtmlWbPackPluginConfig = new HtmlWbPackPlugin({
+  template: __dirname + '/app/index.html',
+  filename: 'index.html',
+  inject: 'body'
+})
+
+module.exports = {
+    entry: {
+        'main': './app',
+    },
+    output: {
+        path: 'build',
+        filename: 'bundle.js',
+        publicPath: '/'
+    },
+    resolve: {
+        extensions: ['', '.js']
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                include: __dirname + '/app',
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'),
+                include: __dirname + '/app'
+            },
+            {
+                test: /\.scss$/,
+                loaders: ["style", "css", "sass"]
+            },
+            {
+                test: /\.(jpg|png)$/, loader: "url-loader?name=img/img-[hash:6].[ext]"
+            }
+        ],
+    },
+    plugins: [
+        HtmlWbPackPluginConfig,
+        new ExtractTextPlugin("styles.css"),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 3000,
+            proxy: 'http://localhost:8080/'
+        })
+    ]
+};
