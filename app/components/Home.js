@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames/bind'
 import MainWrapper from './MainWrapper'
+import {Link} from 'react-router'
 import styles from '../styles/navigation.css'
 
 const cx = classNames.bind(styles);
@@ -47,7 +48,7 @@ export default class Home extends React.Component {
             <button className={cx("button")} id="nav-button">Menu</button>
             <div className={cx("wrapper")} id="nav-wrapper">
               <ul>
-                <li><a href="#"><span>Loader</span></a></li>
+                <li><Link to='loader'><span>Loader</span></Link></li>
                 <li><a href="#"><span>...</span></a></li>
                 <li><a href="#"><span>...</span></a></li>
                 <li><a href="#"><span>...</span></a></li>

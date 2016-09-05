@@ -1,10 +1,10 @@
 # React Components
-##### A collection of custom react components
+Volume 1 of custom react components
 
 
 
 ### Project details
-Details coming soon. 
+Details and documentation coming soon. 
 
 
 ## Usage
@@ -16,9 +16,11 @@ npm start
 > open http://localhost:3000
 ```
 
+
 ## Navigation
 * /
 * /loader
+> Navigation to each component
 
 
 
