@@ -11,7 +11,6 @@ export default class _Root extends React.Component {
         <div>
           <Router history={history} routes={routes} />
         </div>
-
     )
   }
 }

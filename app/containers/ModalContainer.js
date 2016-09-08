@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react'
 import dynamics from 'dynamics.js'
 import Modal from '../components/Modal'
+import Label from '../components/Label'
 
 export default class ModalContainer extends React.Component {
 
@@ -8,38 +9,36 @@ export default class ModalContainer extends React.Component {
       super(props);
       this.state = {
         isPopupOpen: false
-      };
+      }
     }
 
     handleOpenPopUp() {
-        this.setState({
+        const setState = this.setState.bind(this);
+        setState({
             isPopupOpen: true
         });
     }
 
     handleClosePopup() {
-        this.setState({
+        const setState = this.setState.bind(this)
+        setState({
           isPopupOpen: false
         });
     }
 
     animateModal() {
       // Animate the popover
-        const modal = document.querySelector('span')
-        while (modal !== null) {
-          const div = document.getElementById('modal-box')
-          while (div !== null) {
-            dynamics.animate(div, {
-              translateY: -100
-            }, {
-              type: dynamics.spring,
-              friction: 400,
-              duration: 1300
-            })
-          break;
-          } 
-        break;
-        }  
+      const div = document.getElementById('modal-box')
+      while (div !== null) {
+        dynamics.animate(div, {
+          translateY: -100
+        }, {
+          type: dynamics.spring,
+          friction: 400,
+          duration: 1300
+        })
+      break;
+      } 
     }
     
     componentDidUpdate() {
@@ -51,8 +50,8 @@ export default class ModalContainer extends React.Component {
     render() {
       return (
         <div>
-          <Label openPopUp={this.handleOpenPopUp} />
-          <Modal isOpen={this.state.isPopupOpen} closePopupProp={this.handleClosePopup}>
+          <Label openPopUp={this.handleOpenPopUp.bind(this)} />
+          <Modal isOpen={this.state.isPopupOpen} closePopupProp={this.handleClosePopup.bind(this)}>
             Hello Ya'll
           </Modal>
         </div>

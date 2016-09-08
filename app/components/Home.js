@@ -49,7 +49,7 @@ export default class Home extends React.Component {
             <div className={cx("wrapper")} id="nav-wrapper">
               <ul>
                 <li><Link to='loader'><span>Loader</span></Link></li>
-                <li><a href="#"><span>...</span></a></li>
+                <li><Link to='modal'><span>Modal</span></Link></li>
                 <li><a href="#"><span>...</span></a></li>
                 <li><a href="#"><span>...</span></a></li>
                 <li><a href="#"><span>...</span></a></li>
