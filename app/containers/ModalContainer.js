@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react'
+import React, {PropTypes, Component} from 'react'
 import dynamics from 'dynamics.js'
 import Modal from '../components/Modal'
+import ModalWrapper from '../components/Modal/ModalWrapper'
 import Label from '../components/Label'
 
-export default class ModalContainer extends React.Component {
+export default class ModalContainer extends Component {
 
     constructor(props) {
       super(props);
@@ -49,12 +50,12 @@ export default class ModalContainer extends React.Component {
 
     render() {
       return (
-        <div>
+        <ModalWrapper>
           <Label openPopUp={this.handleOpenPopUp.bind(this)} />
           <Modal isOpen={this.state.isPopupOpen} closePopupProp={this.handleClosePopup.bind(this)}>
-            Hello Ya'll
+            Hello Ya'll -- Click outside to close
           </Modal>
-        </div>
+        </ModalWrapper>
       );
     }
 }

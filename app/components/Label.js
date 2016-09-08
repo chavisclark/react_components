@@ -7,7 +7,7 @@ const cx = classNames.bind(styles)
 const Label = (props) => {
   const {openPopUp} = props;
     return (
-      <div className={cx('label')} className={cx('hoverable')}> 
+      <div className={cx('label', 'hoverable')}> 
           <label onClick={openPopUp}>Open</label>
       </div>
 

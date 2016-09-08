@@ -1,6 +1,14 @@
 .label {
-    display: block;
-    background: rgba(200, 200, 200, 1);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label label {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 100px;
+  font-size: 2em;
+  border-radius: 2px;
 }
 
 .hoverable {

@@ -1,6 +1,25 @@
+@mixin size($width:inherit, $height:inherit) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($vertical, $horizontal, $direction:row) {
+    display: flex;
+    align-items: $vertical;
+    justify-content: $horizontal;
+    flex-direction: $direction;
+}
+
+.container {
+    @include size(100%);
+    @include flex(center, center);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
 .backdrop {
-    background: rbga(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     box-sizing: border-box;
     height: 100%;
     left: 0;
@@ -11,12 +30,12 @@
 }
 .popup {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 5;
+    border-radius: 5px;
     box-sizing: border-box;
-    min-height: 200px;
+    min-height: 350px;
     padding: 20px;
     position: relative;
-    min-width: 300px;
+    min-width: 500px;
     color: #000000;
 }
 .popupContainer {
@@ -30,4 +49,36 @@
     top: 0;
     width: 100%;
     z-index: 11;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 11;
+  margin-top: -2.25em;
+  margin-left: -2.25em;
+  padding-top: 0em;
+  width: 4.5em;
+  height: 4.5em;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  background-color: #429a67;
+  color: #FFF;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  transition: 500ms;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  text-decoration: none;
+}
+
+.back:hover {
+  top: 60px;
+  padding-top: 40px;
 }
