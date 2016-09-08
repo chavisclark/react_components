@@ -20,6 +20,7 @@ npm start
 ## Navigation
 * /
 * /loader
+* /modal
 
 > Navigation to each component
 
