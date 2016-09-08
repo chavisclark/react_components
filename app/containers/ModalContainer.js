@@ -1,10 +1,6 @@
-import React = require('react');
-import dynamics = require('dynamics.js');
-import PropTypes = React.PropTypes;
-import Modal = require('../Modal');
-import MyArtistShare = require('./MyArtistShare')
-import {connect} = require('react-redux');
-import styles = require('../../styles/components/user');
+import React, {PropTypes} from 'react';
+import dynamics from 'dynamics.js';
+import Modal from '..components/Modal');
 
 export default class ModalContainer extends React.Component {
 
@@ -63,6 +59,3 @@ export default class ModalContainer extends React.Component {
       );
     }
 }
-
-
-export default ModalContainer
