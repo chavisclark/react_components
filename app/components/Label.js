@@ -4,14 +4,14 @@ import styles from '../styles/label.css'
 
 const cx = classNames.bind(styles)
 
-const MainWrapper = (props) => {
-  const {children} = props;
+const Label = (props) => {
+  const {openPopUp} = props;
     return (
-      <div className={styles.label} className='hoverable'> 
-          <label className="btn btn-facebook form-control" onClick={this.handleOpenPopUp}>PROMOTE</label>
+      <div className={cx('label')} className={cx('hoverable')}> 
+          <label onClick={openPopUp}>Open</label>
       </div>
 
     )
 }
 
-export default MainWrapper
+export default Label

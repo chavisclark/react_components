@@ -1,6 +1,6 @@
-import React, {PropTypes} from 'react';
-import dynamics from 'dynamics.js';
-import Modal from '..components/Modal');
+import React, {PropTypes} from 'react'
+import dynamics from 'dynamics.js'
+import Modal from '../components/Modal'
 
 export default class ModalContainer extends React.Component {
 
@@ -25,9 +25,9 @@ export default class ModalContainer extends React.Component {
 
     animateModal() {
       // Animate the popover
-        var modal = document.querySelector('span')
+        const modal = document.querySelector('span')
         while (modal !== null) {
-          var div = document.getElementById('modal-box')
+          const div = document.getElementById('modal-box')
           while (div !== null) {
             dynamics.animate(div, {
               translateY: -100

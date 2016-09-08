@@ -1,0 +1,15 @@
+.label {
+    display: block;
+    background: rgba(200, 200, 200, 1);   
+}
+
+.hoverable {
+    opacity: 0.8;
+    transition-duration: 500ms;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+}
+
+.hoverable:hover {
+    opacity: 1;
+}
