@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import classNames from 'classnames/bind'
 import MainWrapper from './MainWrapper'
 import {Link} from 'react-router'
@@ -7,7 +7,7 @@ import styles from '../styles/navigation.css'
 const cx = classNames.bind(styles);
 const opened = cx('opened-nav');
 
-export default class Home extends React.Component {
+export default class Home extends Component {
 
   nav() {
     let button = document.getElementById('nav-button'),

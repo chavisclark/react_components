@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import React, {PropTypes, Component} from 'react'
 import {Link} from 'react-router'
 import classNames from 'classnames/bind'
 import styles from './style.scss'
@@ -23,7 +23,7 @@ const initialState = {
   stateNumber: 0
 }
 
-export default class Loader extends React.Component {
+export default class Loader extends Component {
     constructor(props) {
     super(props)
     this.state = initialState;

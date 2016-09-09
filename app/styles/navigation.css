@@ -65,7 +65,6 @@
   overflow: hidden;
 }
 
-/*cover to prevent extra space of anchors from being clickable*/
  .wrapper:after{
   content:".";
   display:block;
