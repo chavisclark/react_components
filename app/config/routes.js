@@ -8,6 +8,7 @@ import ModalContainer from '../containers/ModalContainer'
 const routes = (
   <Route component={Main}>
     <Route path='/' component={Home}/>
+    <Route path='/react_components' component={Home} />
     <Route path='/loader' component={LoaderContainer}/>
     <Route path='/modal' component={ModalContainer}/>
   </Route>

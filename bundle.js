@@ -27304,6 +27304,7 @@
 	  _reactRouter.Route,
 	  { component: _Main2.default },
 	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _Home2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/react_components', component: _Home2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/loader', component: _LoaderContainer2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '/modal', component: _ModalContainer2.default })
 	);
